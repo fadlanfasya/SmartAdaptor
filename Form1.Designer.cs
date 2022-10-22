@@ -34,23 +34,16 @@
             this.cmbSerialPort = new System.Windows.Forms.ComboBox();
             this.btnON = new System.Windows.Forms.Button();
             this.btnOff = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblBatteryName = new System.Windows.Forms.Label();
             this.lblBatteryStatus = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.txtChargeStatus = new System.Windows.Forms.TextBox();
-            this.txtFullLifetime = new System.Windows.Forms.TextBox();
-            this.txtCharge = new System.Windows.Forms.TextBox();
-            this.txtLifeRemaining = new System.Windows.Forms.TextBox();
             this.txtLineStatus = new System.Windows.Forms.TextBox();
             this.txtChargeON = new System.Windows.Forms.TextBox();
             this.txtChargeOff = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.bt1 = new System.Windows.Forms.RichTextBox();
             this.bt5 = new System.Windows.Forms.RichTextBox();
@@ -60,7 +53,13 @@
             this.battbox = new System.Windows.Forms.GroupBox();
             this.txtBatere = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtFullLifetime = new System.Windows.Forms.TextBox();
+            this.txtLifeRemaining = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.petir = new System.Windows.Forms.PictureBox();
             this.battbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.petir)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbSerialPort
@@ -75,6 +74,7 @@
             // 
             // btnON
             // 
+            this.btnON.ForeColor = System.Drawing.Color.Black;
             this.btnON.Location = new System.Drawing.Point(11, 71);
             this.btnON.Margin = new System.Windows.Forms.Padding(2);
             this.btnON.Name = "btnON";
@@ -86,6 +86,7 @@
             // 
             // btnOff
             // 
+            this.btnOff.ForeColor = System.Drawing.Color.Black;
             this.btnOff.Location = new System.Drawing.Point(138, 71);
             this.btnOff.Margin = new System.Windows.Forms.Padding(2);
             this.btnOff.Name = "btnOff";
@@ -95,19 +96,10 @@
             this.btnOff.UseVisualStyleBackColor = true;
             this.btnOff.Click += new System.EventHandler(this.btnOff_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.progressBar1.Location = new System.Drawing.Point(291, 59);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(311, 43);
-            this.progressBar1.TabIndex = 3;
-            // 
             // lblBatteryName
             // 
             this.lblBatteryName.AutoSize = true;
-            this.lblBatteryName.Location = new System.Drawing.Point(290, 42);
+            this.lblBatteryName.Location = new System.Drawing.Point(276, 17);
             this.lblBatteryName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBatteryName.Name = "lblBatteryName";
             this.lblBatteryName.Size = new System.Drawing.Size(35, 13);
@@ -117,7 +109,7 @@
             // lblBatteryStatus
             // 
             this.lblBatteryStatus.AutoSize = true;
-            this.lblBatteryStatus.Location = new System.Drawing.Point(291, 104);
+            this.lblBatteryStatus.Location = new System.Drawing.Point(273, 119);
             this.lblBatteryStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBatteryStatus.Name = "lblBatteryStatus";
             this.lblBatteryStatus.Size = new System.Drawing.Size(35, 13);
@@ -130,41 +122,15 @@
             // 
             // txtChargeStatus
             // 
-            this.txtChargeStatus.Location = new System.Drawing.Point(476, 141);
+            this.txtChargeStatus.Location = new System.Drawing.Point(391, 154);
             this.txtChargeStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtChargeStatus.Name = "txtChargeStatus";
             this.txtChargeStatus.Size = new System.Drawing.Size(126, 20);
             this.txtChargeStatus.TabIndex = 6;
             // 
-            // txtFullLifetime
-            // 
-            this.txtFullLifetime.Location = new System.Drawing.Point(476, 274);
-            this.txtFullLifetime.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFullLifetime.Name = "txtFullLifetime";
-            this.txtFullLifetime.Size = new System.Drawing.Size(126, 20);
-            this.txtFullLifetime.TabIndex = 7;
-            this.txtFullLifetime.Visible = false;
-            // 
-            // txtCharge
-            // 
-            this.txtCharge.Location = new System.Drawing.Point(476, 207);
-            this.txtCharge.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCharge.Name = "txtCharge";
-            this.txtCharge.Size = new System.Drawing.Size(126, 20);
-            this.txtCharge.TabIndex = 8;
-            // 
-            // txtLifeRemaining
-            // 
-            this.txtLifeRemaining.Location = new System.Drawing.Point(476, 239);
-            this.txtLifeRemaining.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLifeRemaining.Name = "txtLifeRemaining";
-            this.txtLifeRemaining.Size = new System.Drawing.Size(126, 20);
-            this.txtLifeRemaining.TabIndex = 9;
-            this.txtLifeRemaining.Visible = false;
-            // 
             // txtLineStatus
             // 
-            this.txtLineStatus.Location = new System.Drawing.Point(476, 176);
+            this.txtLineStatus.Location = new System.Drawing.Point(391, 189);
             this.txtLineStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtLineStatus.Name = "txtLineStatus";
             this.txtLineStatus.Size = new System.Drawing.Size(126, 20);
@@ -211,49 +177,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(358, 145);
+            this.label3.Location = new System.Drawing.Point(273, 158);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "Charging Status";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(358, 276);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Battery Full Lifetime";
-            this.label4.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(358, 241);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Battery Life Remaining";
-            this.label5.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(358, 210);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Charge %";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(358, 178);
+            this.label7.Location = new System.Drawing.Point(273, 191);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
@@ -312,12 +246,13 @@
             // 
             // battbox
             // 
+            this.battbox.Controls.Add(this.petir);
             this.battbox.Controls.Add(this.bt5);
             this.battbox.Controls.Add(this.bt2);
             this.battbox.Controls.Add(this.bt1);
             this.battbox.Controls.Add(this.bt3);
             this.battbox.Controls.Add(this.bt4);
-            this.battbox.Location = new System.Drawing.Point(16, 210);
+            this.battbox.Location = new System.Drawing.Point(276, 28);
             this.battbox.Name = "battbox";
             this.battbox.Size = new System.Drawing.Size(239, 85);
             this.battbox.TabIndex = 26;
@@ -328,7 +263,7 @@
             this.txtBatere.AutoSize = true;
             this.txtBatere.BackColor = System.Drawing.Color.SlateGray;
             this.txtBatere.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtBatere.Location = new System.Drawing.Point(258, 246);
+            this.txtBatere.Location = new System.Drawing.Point(518, 64);
             this.txtBatere.Name = "txtBatere";
             this.txtBatere.Size = new System.Drawing.Size(20, 15);
             this.txtBatere.TabIndex = 27;
@@ -339,23 +274,73 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.SlateGray;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(255, 234);
+            this.richTextBox1.Location = new System.Drawing.Point(515, 52);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(37, 41);
             this.richTextBox1.TabIndex = 28;
             this.richTextBox1.Text = "";
+            // 
+            // txtFullLifetime
+            // 
+            this.txtFullLifetime.Location = new System.Drawing.Point(391, 278);
+            this.txtFullLifetime.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFullLifetime.Name = "txtFullLifetime";
+            this.txtFullLifetime.Size = new System.Drawing.Size(126, 20);
+            this.txtFullLifetime.TabIndex = 7;
+            this.txtFullLifetime.Visible = false;
+            // 
+            // txtLifeRemaining
+            // 
+            this.txtLifeRemaining.Location = new System.Drawing.Point(391, 243);
+            this.txtLifeRemaining.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLifeRemaining.Name = "txtLifeRemaining";
+            this.txtLifeRemaining.Size = new System.Drawing.Size(126, 20);
+            this.txtLifeRemaining.TabIndex = 9;
+            this.txtLifeRemaining.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(273, 280);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Battery Full Lifetime";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(273, 245);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Battery Life Remaining";
+            this.label5.Visible = false;
+            // 
+            // petir
+            // 
+            this.petir.BackColor = System.Drawing.Color.Green;
+            this.petir.Image = ((System.Drawing.Image)(resources.GetObject("petir.Image")));
+            this.petir.Location = new System.Drawing.Point(102, 30);
+            this.petir.Name = "petir";
+            this.petir.Size = new System.Drawing.Size(32, 32);
+            this.petir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.petir.TabIndex = 29;
+            this.petir.TabStop = false;
             // 
             // Arduino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(648, 307);
+            this.ClientSize = new System.Drawing.Size(573, 225);
             this.Controls.Add(this.txtBatere);
             this.Controls.Add(this.battbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -364,12 +349,10 @@
             this.Controls.Add(this.txtChargeON);
             this.Controls.Add(this.txtLineStatus);
             this.Controls.Add(this.txtLifeRemaining);
-            this.Controls.Add(this.txtCharge);
             this.Controls.Add(this.txtFullLifetime);
             this.Controls.Add(this.txtChargeStatus);
             this.Controls.Add(this.lblBatteryStatus);
             this.Controls.Add(this.lblBatteryName);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnOff);
             this.Controls.Add(this.btnON);
             this.Controls.Add(this.cmbSerialPort);
@@ -381,6 +364,8 @@
             this.Text = "Arduino";
             this.Load += new System.EventHandler(this.Arduino_Load);
             this.battbox.ResumeLayout(false);
+            this.battbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.petir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,23 +377,16 @@
         private System.Windows.Forms.ComboBox cmbSerialPort;
         private System.Windows.Forms.Button btnON;
         private System.Windows.Forms.Button btnOff;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblBatteryName;
         private System.Windows.Forms.Label lblBatteryStatus;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox txtChargeStatus;
-        private System.Windows.Forms.TextBox txtFullLifetime;
-        private System.Windows.Forms.TextBox txtCharge;
-        private System.Windows.Forms.TextBox txtLifeRemaining;
         private System.Windows.Forms.TextBox txtLineStatus;
         private System.Windows.Forms.TextBox txtChargeON;
         private System.Windows.Forms.TextBox txtChargeOff;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox bt1;
         private System.Windows.Forms.RichTextBox bt5;
@@ -418,6 +396,11 @@
         private System.Windows.Forms.GroupBox battbox;
         private System.Windows.Forms.Label txtBatere;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtFullLifetime;
+        private System.Windows.Forms.TextBox txtLifeRemaining;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox petir;
     }
 }
 

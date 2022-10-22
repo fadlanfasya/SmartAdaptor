@@ -124,6 +124,19 @@
     <value>165, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="petir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAN0AAADdAXBTogcAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABXElEQVRYR8XVwU3DQBCFYQsJ1igl0AWNUEgaoQAOKGckJDrggOR1CVzpgQJyWXaDtdmd/U2eOdiH
+        T0Iv1sxEJC9dCOGfuqswukPw7olf12AoGW8e4vJwQq+LMJR4N2x3wHh9n5dvcoDvX7Y74OP2Li49bneA
+        7x+r5ase8N7t4gHf2x3g3b5Zvt4BsXi8+2qWr3ZAWTwWPS/CEJXFY9HzIgwbtniWGPpXnDnBsGGLZ5lP
+        nDnBsELFs8we504wrFDxyGJnpO6guRMMs7nikcXjaW4Bw2yueDTH07+P5hYwzNIHiIcL4geXZhoYZukr
+        hMMF6atLMw0MZbT414DPAwxlvDy++1jb9DzAUEbL0w9W+uGyz87AUMYH/Fk8FoayZvnl4rEwlLUHXCwe
+        C0NZfYBUPBaGsuoArXgsDGXlAWLxWBjKzgfIxWNhKMvvXi8eC0OZd89h7N/in3Lx1EL3A5EBpBNYLzus
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAKwAAAEAIACoxQIAFgAAACgAAAAAAQAAWAEAAAEAIAAAAAAAALACACUWAAAlFgAAAAAAAAAA

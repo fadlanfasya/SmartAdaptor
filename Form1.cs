@@ -24,7 +24,8 @@ namespace ArduinoProject
             {
                 cmbSerialPort.Items.AddRange(System.IO.Ports.SerialPort.GetPortNames());
                 cmbSerialPort.SelectedIndex = 0;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
 
             }
@@ -96,16 +97,8 @@ namespace ArduinoProject
 
             /* Set progress bar values and Properties */
 
-            progressBar1.Maximum = 100;
-
-            progressBar1.Style = ProgressBarStyle.Continuous;
-
-
-
-
 
             timer1.Enabled = true;
-
 
 
             ManagementObjectSearcher mos = new ManagementObjectSearcher("select * from Win32_Battery");
@@ -122,6 +115,7 @@ namespace ArduinoProject
 
                 lblBatteryStatus.Text = statusString;
 
+                
             }
         }
 
@@ -135,70 +129,14 @@ namespace ArduinoProject
 
             {
 
-
-
                 UInt16 statuscode = (UInt16)mo["BatteryStatus"];
 
                 string statusString = StatusCodes[statuscode];
 
                 lblBatteryStatus.Text = statusString;
 
-
-
                 /* Set Progress bar according to status  */
 
-                if (statuscode == 4)
-
-                {
-
-                    progressBar1.ForeColor = Color.Red;
-
-                    progressBar1.Value = 5;
-
-
-
-                }
-
-                else if (statuscode == 3)
-
-                {
-
-                    progressBar1.ForeColor = Color.Blue;
-
-                    progressBar1.Value = 100;
-
-                }
-
-                else if (statuscode == 2)
-
-                {
-
-                    progressBar1.ForeColor = Color.Green;
-
-                    progressBar1.Value = 100;
-
-                }
-
-                else if (statuscode == 5)
-
-                {
-
-                    progressBar1.ForeColor = Color.Red;
-
-                    progressBar1.Value = 1;
-
-                }
-
-                else if (statuscode == 6)
-
-                {
-
-                    progressBar1.ForeColor = Color.Blue;
-
-                    progressBar1.Value = 100;
-
-                }
-                this.Refresh();
             }
         }
         private void ShowPowerStatus()
@@ -211,7 +149,7 @@ namespace ArduinoProject
                 txtFullLifetime.Text = status.BatteryFullLifetime.ToString();
                 txtBatere.Text = status.BatteryLifePercent.ToString("P0");
                 float battpercent = status.BatteryLifePercent * 100;
-                progressBar1.Value =int.Parse( battpercent.ToString());
+
             if (battpercent == 100)
             {
                 bt1.Visible = true;
@@ -253,15 +191,14 @@ namespace ArduinoProject
                 bt2.Visible = false;
                 bt1.BackColor = Color.Red;
             }
-            else
-            {
-                
-            }
+
+
             try
             {
                 if (battpercent >= float.Parse(txtChargeOff.Text.ToString()))
                 {
                     serialportCommand("off");
+
                 }
                 if (battpercent <= float.Parse(txtChargeON.Text) && txtChargeStatus.Text=="0")
                 {
@@ -277,8 +214,17 @@ namespace ArduinoProject
                 txtLifeRemaining.Text = "Unknown";
             else
                 txtLifeRemaining.Text =
-                    status.BatteryLifeRemaining.ToString();
-            txtLineStatus.Text = status.PowerLineStatus.ToString();
+                status.BatteryLifeRemaining.ToString();
+                txtLineStatus.Text = status.PowerLineStatus.ToString();
+
+            if (txtLineStatus.Text == "Online")
+            {
+                petir.Visible = true;
+            }
+            else
+            {
+                petir.Visible = false;
+            }
         }
     }
 }
